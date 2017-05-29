@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=1230">
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinHTML5.css">
+	<link rel="stylesheet" type="text/css" href="css/selectize.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic" rel="stylesheet">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+	<header>
+		<div class="head-1">
+			<div class="container">
+				<div class="head-dropdown">
+					<div class="dropdown-wrap">
+						<a href="#" class="dropdown-toggle">О нас</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Наш коллектив</a></li>
+							<li><a href="#">Почему выбирают нас</a></li>
+						</ul>
+					</div>
+					<div class="dropdown-wrap">
+						<a href="#" class="dropdown-toggle">Каталог недвижимости</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Квартиры</a></li>
+							<li><a href="#">Новостройки</a></li>
+							<li><a href="#">Комнаты</a></li>
+							<li><a href="#">Частные дома</a></li>
+							<li><a href="#">Земельные участки</a></li>
+							<li><a href="#">Недвижимость за рубежом</a></li>
+							<li><a href="#">Коммерческая недвижимость</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="navbar">
+					<li><a href="#">Обзор новостроек</a></li>
+					<li><a href="#">Строительство домов</a></li>
+					<li><a href="#">Ипотека</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Стоимость услуг</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="login-wrap"><i class="fa fa-user" aria-hidden="true"></i><a href="#">Войти</a></div>
+			</div>
+		</div>
+		<div class="head-2">
+			<div class="container">
+				<div class="logo-wrap"><a href="#"><img src="img/logo.png" alt=""></a></div>
+				<div class="head-2-right">
+					<p class="head-addr">
+						Наш адрес: <br><i class="fa fa-map-marker" aria-hidden="true"></i> Казань, Московская, 11, оф. 302
+					</p>
+					<div class="head-tel">
+						<span class="tel">+7 (843) 240-42-41</span>
+						<span class="tel">+7 (843) 249-11-65</span>
+					</div>
+					<button class="req-btn btn">Заявка на услугу</button>
+				</div>
+			</div>
+		</div>
+		<div class="head-3">
+			<div class="container">
+				<div class="head-3-top">
+					<ul class="head-3-tabs">
+						<li class="active"><a href="#"><img src="img/f1-act.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f2.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f3.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f4.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f5.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f6.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f7.png" alt=""></a></li>
+					</ul>
+					<div class="img-wrap">
+						<img src="img/pic.png" alt="">
+					</div>
+				</div>
+				<form class="filter" method="post">
+					<div class="filter-left">
+						<div class="search-input-wrap">
+							<input type="text" name="" placeholder="Поиск">
+						</div>
+						<div class="filter-select">
+							<select class="chosen-select" data-placeholder="Выберите город">
+								<option></option>
+								<option>Все</option>
+								<option>Казань</option>
+								<option>Лениногорс</option>
+								<option>Набережные Челны</option>
+								<option>Нижнекамск</option>
+								<option>Чистополь</option>
+								<option>Зеленодольск</option>
+								<option>Альметьевск</option>
+								<option>Азнакаево</option>
+								<option>Бугульма</option>
+								<option>Елабуга</option>
+								<option>Заинск</option>
+								<option>Выбрать другой...</option>
+							</select>
+							<select class="chosen-select" data-placeholder="Квартиры">
+								<option></option>
+								<option>Чистополь</option>
+								<option>Зеленодольск</option>
+								<option>Альметьевск</option>
+								<option>Азнакаево</option>
+								<option>Бугульма</option>
+								<option>Елабуга</option>
+								<option>Выбрать другой...</option>
+							</select>
+							<select class="chosen-select" data-placeholder="Выберите район">
+								<option></option>
+								<option>Чистополь</option>
+								<option>Зеленодольск</option>
+								<option>Альметьевск</option>
+								<option>Азнакаево</option>
+								<option>Бугульма</option>
+								<option>Елабуга</option>								
+								<option>Выбрать другой...</option>
+							</select>
+						</div>
+						<div class="filter-range">
+							<div class="range-body">
+								<div class="range-text">
+									<span class="range-name">Площадь:</span>
+									<span class="range-numbers">
+										<span class="range-from" id="square-from"></span>
+										-
+										<span class="range-to" id="square-to"></span>
+										<span>м<sub>2</sub></span>
+									</span>
+								</div>
+								<input type="text" id="range-square" name="example_name" value="" />
+					  	    </div>
+					  	    <div class="range-body">
+					  	   		<div class="range-text">
+									<span class="range-name">Цена:</span>
+									<span class="range-numbers">
+										<span class="range-from" id="price-from"></span>
+										-
+										<span class="range-to" id="price-to"></span>
+										<span>Р</span>
+									</span>
+								</div>
+								<input type="text" id="range-price" name="example_name" value="" />				  	      
+					  	    </div>
+					  	    <div class="range-body">
+					  	    	<div class="range-text">
+									<span class="range-name">Кол-во комнат:</span>
+									<span class="range-numbers">
+										<span class="range-from" id="room-from"></span>
+										-
+										<span class="range-to" id="room-to"></span>
+									</span>
+								</div>
+								<input type="text" id="range-room" name="example_name" value="" />				  	      
+					  	    </div>
+						</div>
+					</div>
+					<div class="filter-right">
+						
+						<a href="#" class="filter-expand">Расширенный поиск<img src="img/extended-ico.png" alt=""></a>
+						<div class="clear"></div>
+						<div class="choose-floor">
+							<span class="choose-head">Этаж:</span>
+							<label>Не первый<input type="checkbox" name=""><span></span></label>
+							<label>Не последний<input type="checkbox" name=""><span></span></label>
+						</div>
+						<button type="submit" class="submit-btn">Поиск</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<section class="about-page">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="#">Главная</a></li>
+				<li class="active">О нас</li>
+			</ul>
+			<div class="a-sidebar">
+				<div class="sidebar-social">
+					<ul class="visible-fb">
+						<li><a href="#" class="s-fb" data-tab="fb">Facebook</a></li>
+						<li><a href="#" class="s-vk" data-tab="vk">ВКонтакте</a></li>
+						<li><a href="#" class="s-tw" data-tab="tw">Twitter</a></li>
+					</ul>
+					<div class="social-cont">
+						<img src="img/fb.jpg" data-dest="fb">
+						<img src="img/vk.jpg" data-dest="vk" style="display: none;">
+						<img src="img/tw.jpg" data-dest="tw" style="display: none;">
+					</div>
+				</div>
+				<div class="sidebar-vacancy">
+					<h2>Вакансии</h2>
+					<div class="s-vacancy-box">
+						<p class="head"><i class="fa fa-user-plus" aria-hidden="true"></i> Ведущий риэлтор</p>
+						<p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<button class="btn s-vacancy-btn">откликнуться</button>
+					</div>
+					<a href="#" class="s-vacancy-href">посмотреть</a>
+				</div>
+			</div>
+			<div class="a-content">
+				<ul class="a-navbar">
+					<li class="active"><a href="#" data-tab="a-tab-1">О компании</a></li>
+					<li><a href="#" data-tab="a-tab-2">Наш коллектив</a></li>
+					<li><a href="#" data-tab="a-tab-3">Почему выбирают нас</a></li>
+					<li><a href="#" data-tab="a-tab-4">Вакансии</a></li>
+				</ul>
+
+
+				<div class="a-company a-tab" data-dest="a-tab-1">
+					<div class="a-company-top">
+						<img src="img/man.jpg" alt="" class="border-img">
+						<div class="text-wrap">
+							<h2>О компании</h2>
+							<hr>
+							<p class="img-text">Прежде чем сделать окончательный выбор и купить квартиру в Казани, мы предлагаем своим клиентам- покупателям множество вариантов и выгодные условия подбора жилья. Прежде чем сделать окончательный выбор и купить квартиру в Казани, мы предлагаем своим клиентам- покупателям множество вариантов.</p>
+						</div>
+					</div>
+					<div class="a-company-bot">
+						<p>Агентство недвижимости «Вавилон» (является членом гильдии риэлторов РТ) готово предложить Вам выгодные условия продажи квартир на вторичном и первичном рынке жилья г. Казань. Заключенные договора с застройщиками, позволяют нам продавать новостройки в  Казани по ценам застройщиков. Постоянная работа с подрядными организациями и дольщиками, открывает для нас и наших клиентов еще более выгодные цены на новое жилье. </p>
+						<ul class="a-company-list">
+							<li>Обмен квартиры на дом</li>
+							<li>Ремонт квартир</li>
+							<li>Материнский капитал</li>
+							<li>Срочный выкуп квартир</li>
+						</ul>
+					</div>
+				</div>
+
+
+				<div class="a-collective a-tab" data-dest="a-tab-2">
+					<h2>Наш коллектив</h2>
+					<div class="a-collective-wrap">
+						<div class="a-worker">
+							<span class="img-wrap">
+								<img src="img/worker.jpg" alt="">
+							</span>
+							<div class="worker-text">
+								<span class="worker-name">Хакимов Рамиль Радикович</span>
+								<span class="worker-job">Специалист по недвижимости</span>
+								<span class="worker-tel">Телефон: +7 (952)-040-02-22</span>
+							</div>
+						</div>
+						<div class="a-worker">
+							<span class="img-wrap">
+								<img src="img/worker.jpg" alt="">
+							</span>
+							<div class="worker-text">
+								<span class="worker-name">Хакимов Рамиль Радикович</span>
+								<span class="worker-job">Специалист по недвижимости</span>
+								<span class="worker-tel">Телефон: +7 (952)-040-02-22</span>
+							</div>
+						</div>
+						<div class="a-worker">
+							<span class="img-wrap">
+								<img src="img/worker.jpg" alt="">
+							</span>
+							<div class="worker-text">
+								<span class="worker-name">Хакимов Рамиль Радикович</span>
+								<span class="worker-job">Специалист по недвижимости</span>
+								<span class="worker-tel">Телефон: +7 (952)-040-02-22</span>
+							</div>
+						</div>
+						<div class="a-worker">
+							<span class="img-wrap">
+								<img src="img/worker.jpg" alt="">
+							</span>
+							<div class="worker-text">
+								<span class="worker-name">Хакимов Рамиль Радикович</span>
+								<span class="worker-job">Специалист по недвижимости</span>
+								<span class="worker-tel">Телефон: +7 (952)-040-02-22</span>
+							</div>
+						</div>
+						<div class="a-worker">
+							<span class="img-wrap">
+								<img src="img/worker.jpg" alt="">
+							</span>
+							<div class="worker-text">
+								<span class="worker-name">Хакимов Рамиль Радикович</span>
+								<span class="worker-job">Специалист по недвижимости</span>
+								<span class="worker-tel">Телефон: +7 (952)-040-02-22</span>
+							</div>
+						</div>
+						<div class="a-worker">
+							<span class="img-wrap">
+								<img src="img/worker.jpg" alt="">
+							</span>
+							<div class="worker-text">
+								<span class="worker-name">Хакимов Рамиль Радикович</span>
+								<span class="worker-job">Специалист по недвижимости</span>
+								<span class="worker-tel">Телефон: +7 (952)-040-02-22</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="a-vacancies a-tab" data-dest="a-tab-3">
+					<h2>Почему выбирают нас?</h2>
+					<div class="a-vacancy">
+						<p class="head">СПЕЦИАЛИСТ ПО ПРОДАЖЕ НЕДВИЖИМОСТИ</p>
+						<p class="prime">В связи с расширением, идет набор сотрудников на должность <b>"Специалист по продаже Недвижимости"</b>. <br>- Проводится бесплатное обучение от компании (теория, практика, тренинги). Далее прикрепляется к вам опытный наставник, который вас сопровождает на этапах работы и на сделках. </p>
+						<div class="list-wrap">
+							<p class="list-head">Обязанности: </p>
+							<ul class="a-vacancy-list">
+								<li>организация сделок с недвижимостью в интересах клиента,</li>
+								<li>анализ рынка и объектов недвижимости, </li>
+								<li>подбор вариантов и предварительная оценка недвижимости, </li>
+								<li>работа с клиентской базой: поиск новых клиентов, проведение переговоров с клиентами, формирование базы данных, организация просмотра объектов недвижимости, </li>
+								<li>сбор пакета документов для регистрации сделки купли продажи, содействие в оформлении договоров и сопровождение сделки. </li>
+							</ul>
+						</div>
+						<div class="list-wrap">
+							<p class="list-head">Комфортные условия для Вас:</p>
+							<ul class="a-vacancy-list">
+								<li>заработная плата высокая (% от сделок) </li>
+								<li>офис в центре города </li>
+								<li>ПК, телефон </li>
+								<li>профессиональный и карьерный рост </li>
+								<li>повышение уровня доходов в соответствии с профессиональным ростом </li>
+								<li>дружный коллектив. </li>
+							</ul>
+						</div>
+						<div class="list-wrap">
+							<p class="list-head">Требования к кандидату:</p>
+							<ul class="a-vacancy-list">
+								<li>приветствуется успешный опыт работы в продажах</li>
+								<li>навыки проведения деловых переговоров </li>
+								<li>коммуникабельность, организованность, стрессоустойчивость, ответственность, активность, аккуратность, высокий уровень ответственности за персональные результаты, мотивация на высокий уровень дохода</li>
+								<li>позитивное отношение к жизни</li>
+							</ul>
+						</div>
+						<p class="salary-text">От 50 000 руб и выше</p>
+						<button class="a-vacancy-btn btn">откликнуться</button>
+					</div>
+				</div>
+
+
+				<div class="a-vacancies a-tab" data-dest="a-tab-4">
+					<h2>Вакансии</h2>
+					<div class="a-vacancy">
+						<p class="head">СПЕЦИАЛИСТ ПО ПРОДАЖЕ НЕДВИЖИМОСТИ</p>
+						<p class="prime">В связи с расширением, идет набор сотрудников на должность <b>"Специалист по продаже Недвижимости"</b>. <br>- Проводится бесплатное обучение от компании (теория, практика, тренинги). Далее прикрепляется к вам опытный наставник, который вас сопровождает на этапах работы и на сделках. </p>
+						<div class="list-wrap">
+							<p class="list-head">Обязанности: </p>
+							<ul class="a-vacancy-list">
+								<li>организация сделок с недвижимостью в интересах клиента,</li>
+								<li>анализ рынка и объектов недвижимости, </li>
+								<li>подбор вариантов и предварительная оценка недвижимости, </li>
+								<li>работа с клиентской базой: поиск новых клиентов, проведение переговоров с клиентами, формирование базы данных, организация просмотра объектов недвижимости, </li>
+								<li>сбор пакета документов для регистрации сделки купли продажи, содействие в оформлении договоров и сопровождение сделки. </li>
+							</ul>
+						</div>
+						<div class="list-wrap">
+							<p class="list-head">Комфортные условия для Вас:</p>
+							<ul class="a-vacancy-list">
+								<li>заработная плата высокая (% от сделок) </li>
+								<li>офис в центре города </li>
+								<li>ПК, телефон </li>
+								<li>профессиональный и карьерный рост </li>
+								<li>повышение уровня доходов в соответствии с профессиональным ростом </li>
+								<li>дружный коллектив. </li>
+							</ul>
+						</div>
+						<div class="list-wrap">
+							<p class="list-head">Требования к кандидату:</p>
+							<ul class="a-vacancy-list">
+								<li>приветствуется успешный опыт работы в продажах</li>
+								<li>навыки проведения деловых переговоров </li>
+								<li>коммуникабельность, организованность, стрессоустойчивость, ответственность, активность, аккуратность, высокий уровень ответственности за персональные результаты, мотивация на высокий уровень дохода</li>
+								<li>позитивное отношение к жизни</li>
+							</ul>
+						</div>
+						<p class="salary-text">От 50 000 руб и выше</p>
+						<button class="a-vacancy-btn btn">откликнуться</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<div class="clear"></div>
+	<footer>
+		<div class="container partners">
+			<h2>Наши партнёры</h2>
+			<ul>
+				<li><a href="#"><img src="img/p1.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p2.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p3.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p4.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p5.png" alt=""></a></li>
+			</ul>
+		</div>
+		<hr>
+		<div class="container footer-bot">
+			<a href="http://artsoda.ru/" class="soda-href">Создание сайта - SODA</a>
+			<div class="flogo-wrap"><img src="img/logo.png" alt=""></div>
+			<div class="f-contact">
+				<span>Наш адрес: Казань, Московская, 11, оф. 302</span>
+				<span>+7 (843) 240-42-41; +7 (843) 249-11-65</span>
+			</div>
+		</div>
+	</footer>
+
+	<div class="b-popup" id="apply-popup">
+		<div class="b-popup-content">
+	    	<div class="b-popup-wrap">
+	    		<div class="apply-popup">
+	    			<h2>Обратный звонок</h2>
+	    			<p class="popup-text">Введите контактные данные и наш менеджер свяжется с Вами в ближайшее время</p>
+	    			<form method="post" class="popup-form">
+	    				<label>
+	    					<span>Как к Вам обращаться?</span>
+	    					<input type="text" name="" placeholder="Введите Ваше имя">
+	    				</label>
+	    				<label>
+	    					<span>Контактный телефон</span>
+	    					<input type="text" name="" id="popup-mask" placeholder="+7 (___) ___-__-__">
+	    				</label>
+	    				<button class="popup-btn btn">отправить</button>
+	    			</form>
+	    		</div>
+	    		<span class="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+	    	</div>
+	    </div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/selectize.min.js"></script>
+<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/maskedInput.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=1230">
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinHTML5.css">
+	<link rel="stylesheet" type="text/css" href="css/selectize.css">
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic" rel="stylesheet">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+	<header>
+		<div class="head-1">
+			<div class="container">
+				<div class="head-dropdown">
+					<div class="dropdown-wrap">
+						<a href="#" class="dropdown-toggle">О нас</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Наш коллектив</a></li>
+							<li><a href="#">Почему выбирают нас</a></li>
+						</ul>
+					</div>
+					<div class="dropdown-wrap">
+						<a href="#" class="dropdown-toggle">Каталог недвижимости</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Квартиры</a></li>
+							<li><a href="#">Новостройки</a></li>
+							<li><a href="#">Комнаты</a></li>
+							<li><a href="#">Частные дома</a></li>
+							<li><a href="#">Земельные участки</a></li>
+							<li><a href="#">Недвижимость за рубежом</a></li>
+							<li><a href="#">Коммерческая недвижимость</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="navbar">
+					<li><a href="#">Обзор новостроек</a></li>
+					<li><a href="#">Строительство домов</a></li>
+					<li><a href="#">Ипотека</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Стоимость услуг</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="login-wrap"><i class="fa fa-user" aria-hidden="true"></i><a href="#">Войти</a></div>
+			</div>
+		</div>
+		<div class="head-2">
+			<div class="container">
+				<div class="logo-wrap"><a href="#"><img src="img/logo.png" alt=""></a></div>
+				<div class="head-2-right">
+					<p class="head-addr">
+						Наш адрес: <br><i class="fa fa-map-marker" aria-hidden="true"></i> Казань, Московская, 11, оф. 302
+					</p>
+					<div class="head-tel">
+						<span class="tel">+7 (843) 240-42-41</span>
+						<span class="tel">+7 (843) 249-11-65</span>
+					</div>
+					<button class="req-btn btn">Заявка на услугу</button>
+				</div>
+			</div>
+		</div>
+		<div class="head-3">
+			<div class="container">
+				<div class="head-3-top">
+					<ul class="head-3-tabs">
+						<li class="active"><a href="#"><img src="img/f1-act.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f2.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f3.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f4.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f5.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f6.png" alt=""></a></li>
+						<li><a href="#"><img src="img/f7.png" alt=""></a></li>
+					</ul>
+					<div class="img-wrap">
+						<img src="img/pic.png" alt="">
+					</div>
+				</div>
+				<form class="filter" method="post">
+					<div class="filter-left">
+						<div class="search-input-wrap">
+							<input type="text" name="" placeholder="Поиск">
+						</div>
+						<div class="filter-select">
+							<select class="chosen-select" data-placeholder="Выберите город">
+								<option></option>
+								<option>Все</option>
+								<option>Казань</option>
+								<option>Лениногорс</option>
+								<option>Набережные Челны</option>
+								<option>Нижнекамск</option>
+								<option>Чистополь</option>
+								<option>Зеленодольск</option>
+								<option>Альметьевск</option>
+								<option>Азнакаево</option>
+								<option>Бугульма</option>
+								<option>Елабуга</option>
+								<option>Заинск</option>
+								<option>Выбрать другой...</option>
+							</select>
+							<select class="chosen-select" data-placeholder="Квартиры">
+								<option></option>
+								<option>Чистополь</option>
+								<option>Зеленодольск</option>
+								<option>Альметьевск</option>
+								<option>Азнакаево</option>
+								<option>Бугульма</option>
+								<option>Елабуга</option>
+								<option>Выбрать другой...</option>
+							</select>
+							<select class="chosen-select" data-placeholder="Выберите район">
+								<option></option>
+								<option>Чистополь</option>
+								<option>Зеленодольск</option>
+								<option>Альметьевск</option>
+								<option>Азнакаево</option>
+								<option>Бугульма</option>
+								<option>Елабуга</option>								
+								<option>Выбрать другой...</option>
+							</select>
+						</div>
+						<div class="filter-range">
+							<div class="range-body">
+								<div class="range-text">
+									<span class="range-name">Площадь:</span>
+									<span class="range-numbers">
+										<span class="range-from" id="square-from"></span>
+										-
+										<span class="range-to" id="square-to"></span>
+										<span>м<sub>2</sub></span>
+									</span>
+								</div>
+								<input type="text" id="range-square" name="example_name" value="" />
+					  	    </div>
+					  	    <div class="range-body">
+					  	   		<div class="range-text">
+									<span class="range-name">Цена:</span>
+									<span class="range-numbers">
+										<span class="range-from" id="price-from"></span>
+										-
+										<span class="range-to" id="price-to"></span>
+										<span>Р</span>
+									</span>
+								</div>
+								<input type="text" id="range-price" name="example_name" value="" />				  	      
+					  	    </div>
+					  	    <div class="range-body">
+					  	    	<div class="range-text">
+									<span class="range-name">Кол-во комнат:</span>
+									<span class="range-numbers">
+										<span class="range-from" id="room-from"></span>
+										-
+										<span class="range-to" id="room-to"></span>
+									</span>
+								</div>
+								<input type="text" id="range-room" name="example_name" value="" />				  	      
+					  	    </div>
+						</div>
+					</div>
+					<div class="filter-right">
+						
+						<a href="#" class="filter-expand">Расширенный поиск<img src="img/extended-ico.png" alt=""></a>
+						<div class="clear"></div>
+						<div class="choose-floor">
+							<span class="choose-head">Этаж:</span>
+							<label>Не первый<input type="checkbox" name=""><span></span></label>
+							<label>Не последний<input type="checkbox" name=""><span></span></label>
+						</div>
+						<button type="submit" class="submit-btn">Поиск</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<section class="o-page">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">База объектов</a></li>
+				<li class="active">2 комн, 43.70/28.60/5.80м²</li>
+			</ul>
+			<div class="o-page-cont">
+				<h2>2-к квартира, 48 м<sup>2</sup>, 1/1 эт., Кировский район</h2>
+				<div class="o-top">
+					<div class="o-top-left">
+						<div class="o-img-wrap">
+							<img src="img/o1.jpg" alt="" style="display: inline-block;" href="img/o1.jpg" id="o-prime-img">
+						</div>
+						<ul class="o-thumbs-wrap">
+							<li class="active"><img src="img/o1.jpg"></li>
+							<li><img src="img/o2.jpg" alt=""></li>
+							<li><img src="img/o3.jpg" alt=""></li>
+							<li><img src="img/o4.jpg" alt=""></li>
+							<li><img src="img/o5.jpg" alt=""></li>
+							<li><img src="img/o6.jpg" alt=""></li>
+						</ul>
+						<div class="rieltor-wrap">
+							<span class="rieltor-img"><img src="img/rieltor.jpg" alt=""></span>
+							<span class="rieltor-name">Галимов <br>Рамиль</span>
+							<span class="rieltor-who">Риэлтор</span>
+							<span class="rieltor-tel">+7 (952)-040-18-88</span>
+						</div>
+					</div>
+					<div class="o-top-right">
+						<span class="o-price">2 500 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+						<span class="o-address">Казань, поселок Щербаково, ул. Центральная (Крутушка), д.54</span>
+						<button class="o-order-btn btn">Заказать просмотр</button>
+						<a href="#" class="o-print"><i class="fa fa-print" aria-hidden="true"></i> Распечатать</a>
+						<span class="o-params-head">Параметры:</span>
+						<ul class="o-params">
+							<li>
+								<span class="o-param-l">Категория:	</span>
+								<span class="o-param-r">квартиры</span>
+							</li>
+							<li>
+								<span class="o-param-l">Общая площадь:</span>
+								<span class="o-param-r">36 м<sup>2</sup></span>
+							</li>
+							<li>
+								<span class="o-param-l">Жилая:</span>
+								<span class="o-param-r">24 м<sup>2</sup></span>
+							</li>
+							<li>
+								<span class="o-param-l">Кухня:</span>
+								<span class="o-param-r">12 м<sup>2</sup></span>
+							</li>
+							<li>
+								<span class="o-param-l">Количество комнат:</span>
+								<span class="o-param-r">1-комн.</span>
+							</li>
+							<li>
+								<span class="o-param-l">Тип:</span>
+								<span class="o-param-r">новостройка</span>
+							</li>
+							<li>
+								<span class="o-param-l">Проект:</span>
+								<span class="o-param-r">улучшенка</span>
+							</li>
+							<li>
+								<span class="o-param-l">Стены:</span>
+								<span class="o-param-r">кирпич</span>
+							</li>
+							<li>
+								<span class="o-param-l">Лоджия, балкон:</span>
+								<span class="o-param-r">отсутствует</span>
+							</li>
+							<li>
+								<span class="o-param-l">Этаж:</span>
+								<span class="o-param-r">1</span>
+							</li>
+							<li>
+								<span class="o-param-l">Этажность:</span>
+								<span class="o-param-r">9</span>
+							</li>
+							
+						</ul>
+						<div class="o-social">
+							<span>Расскажиет об объекте своим друзьям:</span>
+							<img src="img/social.jpg">
+						</div>
+						<div class="credit-calc">
+							<p class="head">Кредитный калькулятор</p>
+							<p>Ежемесячный платёж по этому объекту: <span>30000 руб</span></p>
+							<p>% ставка по кредиту: <span>14</span></p>
+							<div class="calc-inputs">
+								<label><input type="text" name="" placeholder="Первоначальный взнос"><span>руб.</span></label>
+								<div class="select-wrap">
+									<select class="calc-select" data-placeholder="Срок кредитования">
+										<option></option>
+										<option>1-2</option>
+										<option>3-5</option>
+										<option>5-10</option>
+										<option>10-20</option>
+									</select>
+									<span>лет</span>
+								</div>
+							</div>
+							<button class="btn calc-submit">расчитать</button>
+						</div>
+					</div>
+				</div>
+				<div class="o-text-block">
+					<h2>Описание:</h2>
+					<p class="o-prime-text">
+						Риэлторская Компания ВАВИЛОН предлагает следующий объект:
+						<br>
+						<br>
+						2-комнатная квартира (хрущевка), Советский район, ул.Красной Позиции, д.5. Расположена на 5 этаже 5-этажного панельного дома. Общая площадь квартиры 42,7 м<sup>2</sup>, комнаты: 16,5 м<sup>2</sup>, 12 м<sup>2</sup>, кухня 6,5 м<sup>2</sup>.
+						<br>
+						<br>
+						В квартире косметический ремонт: на стенах обои, на полу - плиты ДВП, потолок - побелка. Санузел совмещен, отделан кафельной плиткой, коммуникации пластик, установлены счетчики на воду. На кухне, новая газовая колонка - полуавтомат, хороший кухонный гарнитур. Балкон застеклен. Окна деревянные, выходят во двор. Долговечные чугунные радиаторы отопления. В стоимость квартиры входит вся имеющаяся мебель. Право собственности боле 3-х лет, любая форма оплаты. Тихий уютный двор. спокойное место в самом центре города. Торг.
+						<br>
+						<br>
+						Прекрасная инфраструктура: в шаговой доступности расположены образовательные учреждения: детские сады, школы, ВУЗы, объекты социальной инфраструктуры, торговые точки. 200 метров до автобусной остановки.
+						<br>
+						Рядом улицы: Ершова, Гвардейская, Аделя Кутуя, Абжалилова.
+					</p>
+					<hr class="text-bot-sep">
+					<p class="o-text-bot">
+						Номер в базе: 44900. <br>
+						Примем в оплату Ваше жилье!<br> 
+						Сопровождение сделки на всех этапах от нашей компании!<br> 
+						Окажем помощь в оформлении ИПОТЕКИ - более 25 банков - бесплатно!
+					</p>
+				</div>
+				<div class="o-map-wrap">
+					<h2>Объект на карте</h2>
+					<div id="o-map"></div>
+				</div>
+				<div class="o-similar">
+					<h2>Похожие объекты</h2>
+					<div class="objects-wrap">
+						<div class="object-item">
+							<div href="#" class="img-wrap">
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+								<a href="#"><img src="img/object2.jpg" alt=""></a>
+								<a href="#"><img src="img/object3.jpg" alt=""></a>
+								<a href="#"><img src="img/object4.jpg" alt=""></a>
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+							</div>
+							<div class="text-wrap">
+								<p class="obj-addr">
+									<span class="obj-city">Казань</span>
+									<span class="obj-addr">ул. Глушко академика, д.49</span>
+								</p>
+								<a href="#" class="obj-props">2-к квартира, 3/5 эт.,<br> Кировский район</a>
+								<div class="obj-bot">
+									<span class="obj-area">52,2 м²</span>
+									<span class="obj-price">3 040 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="object-item">
+							<div href="#" class="img-wrap">
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+								<a href="#"><img src="img/object2.jpg" alt=""></a>
+								<a href="#"><img src="img/object3.jpg" alt=""></a>
+								<a href="#"><img src="img/object4.jpg" alt=""></a>
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+							</div>
+							<div class="text-wrap">
+								<p class="obj-addr">
+									<span class="obj-city">Казань</span>
+									<span class="obj-addr">ул. Глушко академика, д.49</span>
+								</p>
+								<a href="#" class="obj-props">2-к квартира, 3/5 эт.,<br> Кировский район</a>
+								<div class="obj-bot">
+									<span class="obj-area">52,2 м²</span>
+									<span class="obj-price">3 040 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="object-item">
+							<div href="#" class="img-wrap">
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+								<a href="#"><img src="img/object2.jpg" alt=""></a>
+								<a href="#"><img src="img/object3.jpg" alt=""></a>
+								<a href="#"><img src="img/object4.jpg" alt=""></a>
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+							</div>
+							<div class="text-wrap">
+								<p class="obj-addr">
+									<span class="obj-city">Казань</span>
+									<span class="obj-addr">ул. Глушко академика, д.49</span>
+								</p>
+								<a href="#" class="obj-props">2-к квартира, 3/5 эт.,<br> Кировский район</a>
+								<div class="obj-bot">
+									<span class="obj-area">52,2 м²</span>
+									<span class="obj-price">3 040 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="object-item">
+							<div href="#" class="img-wrap">
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+								<a href="#"><img src="img/object2.jpg" alt=""></a>
+								<a href="#"><img src="img/object3.jpg" alt=""></a>
+								<a href="#"><img src="img/object4.jpg" alt=""></a>
+								<a href="#"><img src="img/object.jpg" alt=""></a>
+							</div>
+							<div class="text-wrap">
+								<p class="obj-addr">
+									<span class="obj-city">Казань</span>
+									<span class="obj-addr">ул. Глушко академика, д.49</span>
+								</p>
+								<a href="#" class="obj-props">2-к квартира, 3/5 эт.,<br> Кировский район</a>
+								<div class="obj-bot">
+									<span class="obj-area">52,2 м²</span>
+									<span class="obj-price">3 040 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="clear"></div>
+	<footer>
+		<div class="container partners">
+			<h2>Наши партнёры</h2>
+			<ul>
+				<li><a href="#"><img src="img/p1.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p2.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p3.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p4.png" alt=""></a></li>
+				<li><a href="#"><img src="img/p5.png" alt=""></a></li>
+			</ul>
+		</div>
+		<hr>
+		<div class="container footer-bot">
+			<a href="http://artsoda.ru/" class="soda-href">Создание сайта - SODA</a>
+			<div class="flogo-wrap"><img src="img/logo.png" alt=""></div>
+			<div class="f-contact">
+				<span>Наш адрес: Казань, Московская, 11, оф. 302</span>
+				<span>+7 (843) 240-42-41; +7 (843) 249-11-65</span>
+			</div>
+		</div>
+	</footer>
+
+	<div class="b-popup" id="apply-popup">
+		<div class="b-popup-content">
+	    	<div class="b-popup-wrap">
+	    		<div class="apply-popup">
+	    			<h2>Обратный звонок</h2>
+	    			<p class="popup-text">Введите контактные данные и наш менеджер свяжется с Вами в ближайшее время</p>
+	    			<form method="post" class="popup-form">
+	    				<label>
+	    					<span>Как к Вам обращаться?</span>
+	    					<input type="text" name="" placeholder="Введите Ваше имя">
+	    				</label>
+	    				<label>
+	    					<span>Контактный телефон</span>
+	    					<input type="text" name="" id="popup-mask" placeholder="+7 (___) ___-__-__">
+	    				</label>
+	    				<button class="popup-btn btn">отправить</button>
+	    			</form>
+	    		</div>
+	    		<span class="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+	    	</div>
+	    </div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/selectize.min.js"></script>
+<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="js/maskedInput.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$(".calc-select").selectize();
+
+
+		$(document).ready(function(){
+			ymaps.ready(init);
+		    var myMap;
+
+		    function init(){     
+		        myMap = new ymaps.Map("o-map", {
+		            center: [55.77752503255468,49.154850999999944],
+		            zoom: 17,
+		            controls: []
+		        });
+
+		        myPlacemark = new ymaps.Placemark([55.77752503255468,49.154850999999944], 
+		        {
+		        	hintContent: 'ул. Центральная (Крутушка), д.54'
+		        }, 
+		        {
+		        	preset: 'islands#redIcon'
+		        });
+
+				myMap.geoObjects.add(myPlacemark);
+	        	myMap.behaviors.disable(['scrollZoom','multiTouch']);
+		    }
+		});
+
+
+
+
+		$(".object-item .img-wrap").slick({
+			slidesToShow: 1,
+			arrows: false,
+			dots: true,
+			initialSlide: 2,
+			autoplay: false,
+			speed: 0
+		});
+		$('.object-item .slick-dots li').mouseover(function(){
+		    $(this).parents('.slick-slider').slick('goTo', $(this).index());
+		}); 
+
+
+
+
+		$('#o-prime-img').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			image: {
+				verticalFit: true
+			}
+			
+		});
+	});
+</script>
+</body>
+</html>
