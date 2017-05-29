@@ -209,10 +209,23 @@
 						<a href="#" class="promo"></a><!-- HAVE PROMO -->
 						<div href="#" class="img-wrap">
 							<a href="#"><img src="img/object.jpg" alt=""></a>
-							<a href="#"><img src="img/object2.jpg" alt=""></a>
+						</div>
+						<div class="text-wrap">
+							<p class="obj-addr">
+								<span class="obj-city">Казань</span>
+								<span class="obj-addr">ул. Глушко академика, д.49</span>
+							</p>
+							<a href="#" class="obj-props">2-к квартира, 3/5 эт.,<br> Кировский район</a>
+							<div class="obj-bot">
+								<span class="obj-area">52,2 м²</span>
+								<span class="obj-price">3 040 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="object-item">
+						<div href="#" class="img-wrap">
 							<a href="#"><img src="img/object.jpg" alt=""></a>
-							<a href="#"><img src="img/object4.jpg" alt=""></a>
-							<a href="#"><img src="img/object3.jpg" alt=""></a>
+							<a href="#"><img src="img/object2.jpg" alt=""></a>
 						</div>
 						<div class="text-wrap">
 							<p class="obj-addr">
@@ -231,8 +244,6 @@
 							<a href="#"><img src="img/object.jpg" alt=""></a>
 							<a href="#"><img src="img/object2.jpg" alt=""></a>
 							<a href="#"><img src="img/object.jpg" alt=""></a>
-							<a href="#"><img src="img/object4.jpg" alt=""></a>
-							<a href="#"><img src="img/object3.jpg" alt=""></a>
 						</div>
 						<div class="text-wrap">
 							<p class="obj-addr">
@@ -250,29 +261,8 @@
 						<div href="#" class="img-wrap">
 							<a href="#"><img src="img/object.jpg" alt=""></a>
 							<a href="#"><img src="img/object2.jpg" alt=""></a>
-							<a href="#"><img src="img/object.jpg" alt=""></a>
-							<a href="#"><img src="img/object4.jpg" alt=""></a>
-							<a href="#"><img src="img/object3.jpg" alt=""></a>
-						</div>
-						<div class="text-wrap">
-							<p class="obj-addr">
-								<span class="obj-city">Казань</span>
-								<span class="obj-addr">ул. Глушко академика, д.49</span>
-							</p>
-							<a href="#" class="obj-props">2-к квартира, 3/5 эт.,<br> Кировский район</a>
-							<div class="obj-bot">
-								<span class="obj-area">52,2 м²</span>
-								<span class="obj-price">3 040 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-							</div>
-						</div>
-					</div>
-					<div class="object-item">
-						<div href="#" class="img-wrap">
-							<a href="#"><img src="img/object.jpg" alt=""></a>
 							<a href="#"><img src="img/object2.jpg" alt=""></a>
-							<a href="#"><img src="img/object.jpg" alt=""></a>
-							<a href="#"><img src="img/object4.jpg" alt=""></a>
-							<a href="#"><img src="img/object3.jpg" alt=""></a>
+							<a href="#"><img src="img/object2.jpg" alt=""></a>
 						</div>
 						<div class="text-wrap">
 							<p class="obj-addr">
@@ -455,17 +445,8 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$(".object-item .img-wrap").slick({
-			slidesToShow: 1,
-			arrows: false,
-			dots: true,
-			initialSlide: 2,
-			autoplay: false,
-			speed: 0
-		});
-		$('.object-item .slick-dots li').mouseover(function(){
-		    $(this).parents('.slick-slider').slick('goTo', $(this).index());
-		}); 
+		//FIX deleted item
+
 		ymaps.ready(init);
 	    var myMap;
 
@@ -515,6 +496,7 @@
 
 	        myMap.behaviors.disable(['scrollZoom','multiTouch']);
 		}
+
 
 
 

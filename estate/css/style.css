@@ -754,6 +754,9 @@ footer hr{
 	float: right;
 	color: #ff0000;
 }
+
+/*!FIX START*/
+
 .object-item .slick-dots{
 	position: absolute;
 	bottom: 0;
@@ -762,12 +765,12 @@ footer hr{
 	margin: auto;
 	text-align: center;
 	height: 100%;
+	padding-top: 5px;
+	box-sizing: border-box;
 }
 .object-item .slick-dots li{
 	display: inline-block;
-	margin: 0;
-	float: left;
-	width: 20%;
+	margin: 0 3px;
 	height: 100%;
 	box-sizing: border-box;
 	padding-top: 62%;
@@ -785,12 +788,6 @@ footer hr{
 	cursor: pointer;
 	bottom: 15px;
 }
-.object-item .slick-dots li:nth-child(1) button{margin-right: -140px;}
-.object-item .slick-dots li:nth-child(2) button{margin-right: -70px;}
-.object-item .slick-dots li:nth-child(4) button{margin-left: -70px;}
-.object-item .slick-dots li:nth-child(5) button{margin-left: -140px;}
-
-
 .object-item .slick-dots li.slick-active button{
 	width: 14px;
 	height: 14px;
@@ -798,6 +795,11 @@ footer hr{
 	border: 2px solid #00b700;
 	background: none;
 }
+
+
+
+/*!FIX END*/
+
 .object-item .promo{
 	position: absolute;
 	width: 80px;
