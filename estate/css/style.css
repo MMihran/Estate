@@ -41,7 +41,6 @@ sup{
 	display: none;
 }
 .dropdown-menu{
-	// display: block;
 	position: absolute;
 	background-color: #f7f7f7;
 	z-index: 3;
@@ -95,10 +94,14 @@ sup{
 	display: inline-block;
 	margin-left: -4px;
 } 
-.navbar, 
 .head-dropdown{
 	display: inline-block;
 	margin-left: 25px;
+}
+.navbar{
+	float: right;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 .head-dropdown{
 	margin-left: 4px;
@@ -107,17 +110,33 @@ sup{
 	display: inline-block;
 }
 .navbar li + li{
-	margin-left: 25px;
+	margin-left: 20px;
 }
 .login-wrap{
 	float: right;
+	width: 105px;
+	text-align: right;
+	overflow: hidden;
+}
+.login-wrap.logged-in .user-name{
+	max-width: 80px;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	color: #00b700;
+	text-decoration: underline;
 }
 .login-wrap i{
 	color: #333;
 	font-size: 18px;
 	margin-right: 10px;
 }
-
+.login-wrap .fa-sign-out{
+	margin-left: 5px;
+	margin-right: 0;
+	vertical-align: middle;
+	display: inline-block;
+}
 
 .head-2{
 	text-align: right;
@@ -283,12 +302,14 @@ sup{
 	right: 15px;
 	color: #bebebe;
 }
-.filter-select,
+.filter-select{
+	margin-left: -15px;
+}
 .filter-range{
-	margin-left: -31px;
+	margin-left: 0px;
 }
 .range-body{
-	margin-left: 31px;
+	margin-right: 50px;
 }
 .range-body, .selectize-input{
 	width: 245px;
@@ -296,7 +317,7 @@ sup{
 }
 .selectize-control{
 	display: inline-block;
-	margin-left: 31px;
+	margin-left: 15px;
 }
 
 /*CHOSEN_FIX*/
@@ -309,21 +330,21 @@ sup{
 	margin: 0;
 	padding: 0;
 	background: #f7f7f7;
-	font-size: 15px;
+	font-size: 14px;
 	max-height: 1500px;
 }
-.selectize-dropdown [data-selectable]{
+.selectize-dropdown [data-selectable], .filter-checkbox .dropdown-menu li{
 	box-sizing: border-box;
 	height: 35px;
 	line-height: 35px;
-	padding: 0 0 0 38px;
+	padding: 0 0 0 30px;
 }
 .selectize-dropdown .active{
 	background: #413b3e;
 	color: #fff;
 }
-.selectize-input, .selectize-control.single .selectize-input.input-active{
-	width: 245px;
+.selectize-input, .selectize-control.single .selectize-input.input-active, .filter-checkbox{
+	width: 187px;
 	background: #f7f7f7;
 	border-radius: 0;
 	height: 50px;
@@ -359,6 +380,78 @@ sup{
 .chosen-container .chosen-results{
 	max-height: 10000px;
 }
+.filter-checkbox{
+	position: relative;
+	box-sizing: border-box;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.filter-checkbox .dropdown-toggle{
+	display: block;
+	padding: 0;
+}
+.filter-checkbox .dropdown-toggle.active{
+	color: #6d6e6c;
+	box-shadow: none;
+	background: none;
+}
+.filter-checkbox .dropdown-menu{
+	width: 100%;
+	left: 0;
+	margin: 0;
+	top: 49px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.filter-checkbox li {
+	border: none !important;
+}
+.filter-checkbox li a{
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	line-height: 35px;
+}
+.filter-checkbox .dropdown-toggle:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #808080 transparent transparent transparent;
+}
+.filter-checkbox .dropdown-toggle.active:after{
+	margin-top: -4px;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #808080 transparent;
+}
+.filter-checkbox label{
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	padding-left: 12px;
+	display: inline-block;
+	line-height: 35px;
+}
+.filter-checkbox input[type="checkbox"] + span{
+	margin-left: 0 !important;
+	margin-right: 10px;
+	bottom: 0 !important;
+}
+.filter-checkbox .dropdown-menu li{
+	padding-left: 0;
+	font-size: 14px;
+}
+.filter-range .filter-checkbox{
+	position: relative;
+	top: 5px;
+	float: right;
+}
+
 
 
 /*RANGE_FIX*/
@@ -450,10 +543,12 @@ sup{
 .filter .choose-floor label + label{
 	float: right;
 }
-.filter .choose-floor input[type="checkbox"]{
+.filter .choose-floor input[type="checkbox"],
+.filter-checkbox input[type="checkbox"]{
 	display: none;
 }
-.filter .choose-floor input[type="checkbox"] + span{
+.filter .choose-floor input[type="checkbox"] + span,
+.filter-checkbox input[type="checkbox"] + span{
 	display: inline-block;
 	width: 20px;
 	height: 20px;
@@ -463,7 +558,8 @@ sup{
 	position: relative;
 	bottom: 2px;
 }
-.filter .choose-floor input[type="checkbox"]:checked + span{
+.filter .choose-floor input[type="checkbox"]:checked + span,
+.filter-checkbox input[type="checkbox"]:checked + span{
 	background-image: url(../img/checked.png);
 }
 .filter .choose-head{

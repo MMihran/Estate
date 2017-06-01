@@ -15,7 +15,13 @@ $(".head-3-tabs li").not(".active").hover(function(){
 
 
 /*DROPDOWN TOGGLE*/
+
+
 $(window).click(function(e){
+    var target = $(e.target);
+    if (target.parents(".filter-checkbox .dropdown-menu").length) {
+        return;
+    }
     $(".dropdown-toggle").siblings(".dropdown-menu").hide();
     $(".dropdown-toggle").removeClass("active");
     if($(e.target).hasClass("dropdown-toggle")){
@@ -23,7 +29,6 @@ $(window).click(function(e){
         $(e.target).addClass("active");
     };
 });
-
 
 
 

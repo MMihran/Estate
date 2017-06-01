@@ -41,6 +41,7 @@
 						</ul>
 					</div>
 				</div>
+				<div class="login-wrap logged-in"><a href="#"><span class="user-name">Вавилон</span><i class="fa fa-sign-out" aria-hidden="true"></i></a></div>
 				<ul class="navbar">
 					<li><a href="#">Обзор новостроек</a></li>
 					<li><a href="#">Строительство домов</a></li>
@@ -49,7 +50,6 @@
 					<li><a href="#">Стоимость услуг</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
-				<div class="login-wrap"><i class="fa fa-user" aria-hidden="true"></i><a href="#">Войти</a></div>
 			</div>
 		</div>
 		<div class="head-2">
@@ -71,7 +71,7 @@
 			<div class="container">
 				<div class="head-3-top">
 					<ul class="head-3-tabs">
-						<li class="active"><a href="#"><img src="img/f1-act.png"alt=""></a></li>
+						<li class="active"><a href="#"><img src="img/f1-act.png" alt=""></a></li>
 						<li><a href="#"><img src="img/f2.png" alt=""></a></li>
 						<li><a href="#"><img src="img/f3.png" alt=""></a></li>
 						<li><a href="#"><img src="img/f4.png" alt=""></a></li>
@@ -115,6 +115,18 @@
 								<option>Елабуга</option>
 								<option>Выбрать другой...</option>
 							</select>
+							<div class="dropdown-wrap filter-checkbox">
+								<a href="#" class="dropdown-toggle">Станция метро</a>
+								<ul class="dropdown-menu">
+									<li><label><input type="checkbox" name=""><span></span>Не первый</label></li>
+									<li><label><input type="checkbox" name=""><span></span>Не первый</label></li>
+									<li><label><input type="checkbox" name=""><span></span>Не первый</label></li>
+									<li><label><input type="checkbox" name=""><span></span>Не первый</label></li>
+									<li><label><input type="checkbox" name=""><span></span>Не первый</label></li>
+									<li><label><input type="checkbox" name=""><span></span>Не первый</label></li>
+									<li><label><input type="checkbox" name=""><span></span>Не первый</label></li>
+								</ul>
+							</div>
 							<select class="chosen-select" data-placeholder="Выберите район">
 								<option></option>
 								<option>Чистополь</option>
@@ -151,21 +163,19 @@
 								</div>
 								<input type="text" id="range-price" name="example_name" value="" />				  	      
 					  	    </div>
-					  	    <div class="range-body">
-					  	    	<div class="range-text">
-									<span class="range-name">Кол-во комнат:</span>
-									<span class="range-numbers">
-										<span class="range-from" id="room-from"></span>
-										-
-										<span class="range-to" id="room-to"></span>
-									</span>
-								</div>
-								<input type="text" id="range-room" name="example_name" value="" />				  	      
-					  	    </div>
+					  	    <div class="dropdown-wrap filter-checkbox">
+								<a href="#" class="dropdown-toggle">Кол-во комнат:</a>
+								<ul class="dropdown-menu">
+									<li><label><input type="checkbox" name=""><span></span>1</label></li>
+									<li><label><input type="checkbox" name=""><span></span>2</label></li>
+									<li><label><input type="checkbox" name=""><span></span>3</label></li>
+									<li><label><input type="checkbox" name=""><span></span>4</label></li>
+									<li><label><input type="checkbox" name=""><span></span>5+</label></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="filter-right">
-						
 						<a href="#" class="filter-expand">Расширенный поиск<img src="img/extended-ico.png" alt=""></a>
 						<div class="clear"></div>
 						<div class="choose-floor">
@@ -174,8 +184,7 @@
 							<label>Не последний<input type="checkbox" name=""><span></span></label>
 						</div>
 						<button type="submit" class="submit-btn">Поиск</button>
-					</div>
-					
+					</div>					
 				</form>
 			</div>
 		</div>
