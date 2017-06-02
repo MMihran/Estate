@@ -6,8 +6,6 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
-	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinHTML5.css">
 	<link rel="stylesheet" type="text/css" href="css/selectize.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -139,27 +137,21 @@
 						<div class="filter-range">
 							<div class="range-body">
 								<div class="range-text">
-									<span class="range-name">Площадь:</span>
+									<span class="range-name">Площадь(м<sup>2</sup>):</span>
 									<span class="range-numbers">
-										<span class="range-from" id="square-from"></span>
-										-
-										<span class="range-to" id="square-to"></span>
-										<span>м<sub>2</sub></span>
+										от <input type="text" name="area-from">
+										до <input type="text" name="area-to">
 									</span>
 								</div>
-								<input type="text" id="range-square" name="example_name" value="" />
 					  	    </div>
 					  	    <div class="range-body">
 					  	   		<div class="range-text">
-									<span class="range-name">Цена:</span>
+									<span class="range-name">Цена(&#8381;):</span>
 									<span class="range-numbers">
-										<span class="range-from" id="price-from"></span>
-										-
-										<span class="range-to" id="price-to"></span>
-										<span>Р</span>
+										от <input type="text" name="price-from">
+										до <input type="text" name="price-to">
 									</span>
-								</div>
-								<input type="text" id="range-price" name="example_name" value="" />				  	      
+								</div>			  	      
 					  	    </div>
 					  	    <div class="dropdown-wrap filter-checkbox">
 								<a href="#" class="dropdown-toggle">Кол-во комнат:</a>
@@ -182,6 +174,9 @@
 							<label>Не последний<input type="checkbox" name=""><span></span></label>
 						</div>
 						<button type="submit" class="submit-btn">Поиск</button>
+					</div>
+					<div class="filter-reset">
+						<a href="#">Сбросить фильтр</a>
 					</div>					
 				</form>
 			</div>
@@ -448,7 +443,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/selectize.min.js"></script>
-<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/maskedInput.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>

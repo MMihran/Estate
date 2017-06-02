@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
-$(".chosen-select").selectize();
-
+var selectReset = [];
+(function(){
+    var $select = $(".filter .chosen-select").selectize();
+    for (var i = 0; i < $select.length; i++) {
+        selectReset.push($select[i].selectize);
+    }
+})();
 
 var src;
 $(".head-3-tabs li").not(".active").hover(function(){
@@ -15,7 +20,13 @@ $(".head-3-tabs li").not(".active").hover(function(){
 
 
 /*DROPDOWN TOGGLE*/
-
+$(".filter-reset a").click(function(e){
+    e.preventDefault();
+    $("form.filter")[0].reset();
+    for (var i = 0; i < selectReset.length; i++) {
+        selectReset[i].clear();
+    }
+});
 
 $(window).click(function(e){
     var target = $(e.target);
@@ -31,55 +42,6 @@ $(window).click(function(e){
 });
 
 
-
-
-/*Range*/
-var $range1 = $("#range-square"),
-	$range2 = $("#range-price"),
-	$range3 = $("#range-room");
-
-$range1.ionRangeSlider({
-    type: "double",
-    min: 0,
-    max: 180,
-    min_interval: 1,
-    onStart: function (data) {
-        $("#square-from").text(data.from);
-        $("#square-to").text(data.to);
-    },
-    onChange: function (data) {
-        $("#square-from").text(data.from);
-        $("#square-to").text(data.to);
-    }
-});
-$range2.ionRangeSlider({
-    type: "double",
-    min: 0,
-    max: 3000000,
-    step: 10000,
-    min_interval: 10000,
-    onStart: function (data) {
-        $("#price-from").text(data.from);
-        $("#price-to").text(data.to);
-    },
-    onChange: function (data) {
-        $("#price-from").text(data.from);
-        $("#price-to").text(data.to);
-    }
-});
-$range3.ionRangeSlider({
-    type: "double",
-    min: 1,
-    max: 10,
-    onStart: function (data) {
-        $("#room-from").text(data.from);
-        $("#room-to").text(data.to);
-    },
-    onChange: function (data) {
-        $("#room-from").text(data.from);
-        $("#room-to").text(data.to);
-    }
-});
 
 
 //OBJECT_PAGE THUMBS
@@ -166,7 +128,6 @@ $(".object-item .slick-dots li button").click(function(e){
                     var width = 270;
 
                     var index = Math.floor(xPos/width*quant);
-                    console.log(xPos + " / " + 270 + " * " + quant + " = " + index);
                     $(this).parents('.slick-slider').slick('goTo', index);
                 });
 
