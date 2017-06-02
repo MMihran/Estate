@@ -139,31 +139,35 @@
 						<div class="filter-range">
 							<div class="range-body">
 								<div class="range-text">
-									<span class="range-name">Площадь(м<sup>2</sup>):</span>
-									<span class="range-numbers">
-										от <input type="text" name="area-from">
-										до <input type="text" name="area-to">
-									</span>
+									<span class="range-name">Площадь, м²</span>
+								</div>
+								<div class="range-field">
+									<input type="text" placeholder="От">
+									<span>-</span>
+									<input type="text" placeholder="До">
 								</div>
 					  	    </div>
 					  	    <div class="range-body">
 					  	   		<div class="range-text">
-									<span class="range-name">Цена(&#8381;):</span>
-									<span class="range-numbers">
-										от <input type="text" name="price-from">
-										до <input type="text" name="price-to">
-									</span>
-								</div>			  	      
+									<span class="range-name">Цена, т.р.</span>
+								</div>	
+								<div class="range-field">
+									<input type="text" placeholder="От">
+									<span>-</span>
+									<input type="text" placeholder="До">
+								</div>		  	      
 					  	    </div>
-					  	    <div class="dropdown-wrap filter-checkbox">
-								<a href="#" class="dropdown-toggle">Кол-во комнат:</a>
-								<ul class="dropdown-menu">
-									<li><label><input type="checkbox" name=""><span></span>1</label></li>
-									<li><label><input type="checkbox" name=""><span></span>2</label></li>
-									<li><label><input type="checkbox" name=""><span></span>3</label></li>
-									<li><label><input type="checkbox" name=""><span></span>4</label></li>
-									<li><label><input type="checkbox" name=""><span></span>5+</label></li>
-								</ul>
+					  	    <div class="range-body">
+								<div class="range-text">
+									<span class="range-name">Кол-во комнат:</span>
+								</div>
+								<div class="checkbox-style">
+									<label>1<input type="checkbox" name=""><span></span></label>
+									<label>2<input type="checkbox" name=""><span></span></label>		  	      
+									<label>3<input type="checkbox" name=""><span></span></label>		  	      
+									<label>4<input type="checkbox" name=""><span></span></label>		  	      
+									<label>5+<input type="checkbox" name=""><span></span></label>		  	      
+								</div>
 							</div>
 						</div>
 					</div>
@@ -362,13 +366,22 @@
 	    			<p class="popup-text">Введите контактные данные и наш менеджер свяжется с Вами в ближайшее время</p>
 	    			<form method="post" class="popup-form">
 	    				<label>
-	    					<span>Как к Вам обращаться?</span>
-	    					<input type="text" name="" placeholder="Введите Ваше имя">
-	    				</label>
-	    				<label>
-	    					<span>Контактный телефон</span>
-	    					<input type="text" name="" id="popup-mask" placeholder="+7 (___) ___-__-__">
-	    				</label>
+							<input placeholder="Имя" name="name">
+						</label>
+						<label>
+							<input class="popup-mask" name="phone" placeholder="Телефон *">
+						</label>
+	    				<div class="apartment-select">
+							<label>Кол-во комнат:</label>
+							<div class="checkbox-style">
+								<label>1<input type="checkbox" name=""><span></span></label>
+								<label>2<input type="checkbox" name=""><span></span></label>		  	      
+								<label>3<input type="checkbox" name=""><span></span></label>		  	      
+								<label>4<input type="checkbox" name=""><span></span></label>		  	      
+								<label>5+<input type="checkbox" name=""><span></span></label>		  	      
+							</div>
+				  	    </div>
+	    				
 	    				<button class="popup-btn btn">отправить</button>
 	    			</form>
 	    		</div>
@@ -381,7 +394,6 @@
 <script type="text/javascript" src="js/selectize.min.js"></script>
 <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript" src="js/maskedInput.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){

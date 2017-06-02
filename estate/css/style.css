@@ -306,10 +306,10 @@ sup{
 	margin-left: -15px;
 }
 .filter-range{
-	margin-left: 0px;
+	margin-left: -31px;
 }
 .range-body{
-	margin-right: 50px;
+	margin-left: 31px;
 }
 .range-body, .selectize-input{
 	width: 245px;
@@ -319,6 +319,54 @@ sup{
 	display: inline-block;
 	margin-left: 15px;
 }
+.range-field input {
+	width: 100px;
+	height: 40px;
+	padding: 0 15px;
+	font-size: 14px;
+	text-align: center;
+	box-sizing: border-box;
+	color: #6d6e6c;
+	background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+}
+.range-field span {
+	margin: 0 15px;
+}
+.filter-range .checkbox-style {
+	padding-top: 8px;
+}
+.range-field input:focus{
+	background-color: #fff;
+}
+
+/*CHECKBOX-STYLE*/
+.checkbox-style label {
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.checkbox-style input[type="checkbox"] {
+    display: none;
+}
+.checkbox-style input[type="checkbox"] + span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/checkbox.png) no-repeat;
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    bottom: 2px;
+}
+.checkbox-style input[type="checkbox"]:checked + span{
+	background-image: url(../img/checked.png);
+}
+.filter-range .checkbox-style {
+	padding-top: 8px;
+}
+
 
 /*CHOSEN_FIX*/
 .selectize-dropdown{
@@ -446,11 +494,7 @@ sup{
 	padding-left: 0;
 	font-size: 14px;
 }
-.filter-range .filter-checkbox{
-	position: relative;
-	top: 5px;
-	float: right;
-}
+
 
 
 
@@ -465,28 +509,9 @@ sup{
 	font-weight: 500;
 	display: block;
 }
-.range-numbers{
-	float: right;
-	display: block;
+.range-text{
+	margin-bottom: 10px;
 }
-.range-numbers input{
-	background-color: #f7f7f7;
-	border: 1px solid #e0e0e0;
-	width: 70px;
-	margin: 5px 5px 0;
-	height: 25px;
-	padding: 0 8px;
-	color: #6e6d6c;
-}
-.range-numbers input:focus{
-	background-color: #fff;
-}
-.range-numbers sub{
-	font-size: 10px;
-	position: relative;
-	bottom: 5px;
-}
-
 
 
 
@@ -551,7 +576,7 @@ sup{
 	text-transform: uppercase;
 	position: relative;
 	cursor: pointer;
-	margin-top: 25px;
+	margin-top: 40px;
 }
 .filter-right .submit-btn:hover{
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -567,7 +592,7 @@ sup{
 }
 .filter-reset{
 	text-align: right;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 .filter-reset a{
 	color: #6e6d6c;
@@ -1498,6 +1523,17 @@ dd .sample-list-inner.multiline li{
 	font-size: 14px;
 	padding: 0 18px;
 	box-sizing: border-box;
+}
+.apply-popup .apartment-select {
+	text-align: left;
+	margin-bottom: 20px;
+}
+.apply-popup .apartment-select label {
+	width: auto;
+	margin-bottom: 0;
+}
+.apply-popup .apartment-select label span {
+	margin-bottom: 0;
 }
 .popup-btn{
 	width: 100%;

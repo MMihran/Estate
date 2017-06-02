@@ -96,10 +96,6 @@ $(".a-navbar li a").click(function(e){
     $(".a-tab[data-dest=" + dest).fadeIn();
 });
 
-/*masked input*/
-$("#popup-mask").mask("+7 (999) 999-99-99");
-
-
 
 /*OBJ SWITCH*/
 $(".obj-switch a").click(function(e){
