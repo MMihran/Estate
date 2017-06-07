@@ -373,6 +373,8 @@ sup{
 	margin: 0;
 	border: none;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	width: auto !important;
+	min-width: 100%;
 }
 .selectize-dropdown-content{
 	margin: 0;
@@ -385,7 +387,9 @@ sup{
 	box-sizing: border-box;
 	height: 35px;
 	line-height: 35px;
-	padding: 0 0 0 30px;
+	padding: 0 15px 0 30px;
+	overflow-x: hidden;
+	white-space: nowrap;
 }
 .selectize-dropdown .active{
 	background: #413b3e;
@@ -444,7 +448,8 @@ sup{
 	background: none;
 }
 .filter-checkbox .dropdown-menu{
-	width: 100%;
+	width: auto;
+	min-width: 100%;
 	left: 0;
 	margin: 0;
 	top: 49px;
@@ -484,6 +489,8 @@ sup{
 	padding-left: 12px;
 	display: inline-block;
 	line-height: 35px;
+	box-sizing: border-box;
+	padding-right: 15px;
 }
 .filter-checkbox input[type="checkbox"] + span{
 	margin-left: 0 !important;
