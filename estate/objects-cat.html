@@ -85,7 +85,7 @@
 							<input type="text" name="" placeholder="Поиск">
 						</div>
 						<div class="filter-select">
-							<select class="chosen-select" data-placeholder="Выберите город">
+							<select class="chosen-select select-more" data-placeholder="Выберите город">
 								<option></option>
 								<option>Все</option>
 								<option>Казань</option>
@@ -99,7 +99,6 @@
 								<option>Бугульма</option>
 								<option>Елабуга</option>
 								<option>Заинск</option>
-								<option>Выбрать другой...</option>
 							</select>
 							<select class="chosen-select" data-placeholder="Квартиры">
 								<option></option>
@@ -130,7 +129,7 @@
 								<option>Альметьевск</option>
 								<option>Азнакаево</option>
 								<option>Бугульма</option>
-								<option>Елабуга</option>								
+								<option>Елабуга</option>
 								<option>Выбрать другой...</option>
 							</select>
 						</div>
@@ -454,6 +453,16 @@
 	    </div>
 	</div>
 
+	<div class="b-popup" id="city-box">
+		<div class="b-popup-content">
+	    	<div class="b-popup-wrap">
+	    		<h2>Выберите другой город</h2>
+	    		<ul class="city-box"></ul>
+	    		<span class="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+	    	</div>
+	    </div>
+	</div>
+	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/selectize.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>

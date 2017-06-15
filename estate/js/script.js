@@ -1,12 +1,67 @@
 $(document).ready(function(){
 
+var jqxhr;
+var cityArr = [];
+var citySelectizeStart = [];
+$("select.chosen-select.select-more").children("option").each(function(){
+    citySelectizeStart.push($(this).val());
+});
+
+function showMore(event){ 
+    var counter = 0;
+    var addCity = "";
+    $('body').on('click', '.show-more-btn', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        $.ajaxSetup({
+          cache:false
+        });
+        jqxhr = $.getJSON("city.json", function(data){
+        for(var i=0;i<data.length;i++){
+            cityArr[i] = "<li>" + data[i] + "</li>";
+        }
+        }).done(function() {
+            var str = [].join.call(cityArr, " ");
+            $(".city-box").html(cityArr);
+            $("#city-box").fadeIn();
+            $(".city-box li").click(function(e){  
+                if (counter && $.inArray(addCity, citySelectizeStart) == -1) {
+                    console.log("NOT FOUND " + addCity + " in " + citySelectizeStart);
+                    $select[0].selectize.removeOption(addCity);
+                    $select[0].selectize.refreshItems();
+                }
+                counter = 1;
+                addCity = $(this).text();
+                $select[0].selectize.addOption({value: addCity, text: addCity});
+                $select[0].selectize.addItem(addCity);
+                $("#city-box").fadeOut();
+            });
+        });
+
+    });
+}
+
+
+
 var selectReset = [];
-(function(){
-    var $select = $(".filter .chosen-select").selectize();
-    for (var i = 0; i < $select.length; i++) {
-        selectReset.push($select[i].selectize);
+var $select = $(".filter .chosen-select").selectize({
+    persist: false,
+    onInitialize: function(){
+        if($(this.$dropdown[0]).hasClass("select-more")){
+            $(".select-more.selectize-dropdown").append("<div class='show-more-btn'>Выбрать другой...</div>");
+        }
     }
-})();
+});
+showMore();
+
+for (var i = 0; i < $select.length; i++) {
+    selectReset.push($select[i].selectize);
+}
+
+
+
+
+
 
 var src;
 $(".head-3-tabs li").not(".active").hover(function(){
@@ -51,14 +106,26 @@ $(".o-thumbs-wrap li").click(function(e){
 
     $(".o-thumbs-wrap li").removeClass("active");
     $(this).addClass("active");
-    var link = $(this).children("img").attr("src");
+    var link = $(this).find("img").attr("src");
     $("#o-prime-img").hide();
         $("#o-prime-img").attr("src", link);
         $("#o-prime-img").attr("href", link);
         $("#o-prime-img").fadeIn(400);
 });
 
+$('#o-prime-img').click(function(e){
+    e.preventDefault();
+    var id;
+    var arrCheck = $(".o-thumbs-wrap li");
+    for (var i = 0; i < arrCheck.length; i++) {
+        if($(arrCheck[i]).hasClass("active")) {
+            id = i;
+            break; 
+        }
+    }
+    $(".o-thumbs-wrap").magnificPopup("open", id);
 
+});
 
 //POPUP
 var p = $('#apply-popup');
@@ -68,7 +135,7 @@ $(".req-btn").click(function(e){
 });
 $(".popup-close").click(function(e) {
     e.preventDefault();
-    p.fadeOut();
+    $(".b-popup").fadeOut();
     $(".popup-form")[0].reset();
 });
 

@@ -63,7 +63,7 @@ sup{
 	padding: 0 25px 0 30px;
 }
 .dropdown-menu li:hover{
-	background-color: #413b3e;
+	background-color: #413b3e !important;
 	color: #fff;
 }
 .dropdown-toggle{
@@ -374,7 +374,7 @@ sup{
 	border: none;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 	width: auto !important;
-	min-width: 100%;
+	min-width: 187px;
 }
 .selectize-dropdown-content{
 	margin: 0;
@@ -383,18 +383,28 @@ sup{
 	font-size: 14px;
 	max-height: 1500px;
 }
-.selectize-dropdown [data-selectable], .filter-checkbox .dropdown-menu li{
+.selectize-dropdown [data-selectable], .filter-checkbox .dropdown-menu li,
+.selectize-dropdown .show-more-btn{
 	box-sizing: border-box;
 	height: 35px;
 	line-height: 35px;
 	padding: 0 15px 0 30px;
 	overflow-x: hidden;
 	white-space: nowrap;
+	background-color: #f7f7f7;
+	cursor: pointer;
+	font-size: 14px;
 }
 .selectize-dropdown .active{
+	background-color: #f7f7f7;
+	color: #303030;
+}
+.selectize-dropdown [data-selectable]:hover,
+.selectize-dropdown .show-more-btn:hover{
 	background: #413b3e;
 	color: #fff;
 }
+
 .selectize-input, .selectize-control.single .selectize-input.input-active, .filter-checkbox{
 	width: 187px;
 	background: #f7f7f7;
@@ -409,6 +419,16 @@ sup{
 }
 .selectize-control.single .selectize-input, .selectize-control.single .selectize-input input{
 	font-size: 16px;
+}
+.select-more.chosen-select .selectize-dropdown-content .show-more{
+	content: "Выбрать другой...";
+	display: block;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	cursor: pointer;
+	padding: 0 15px 0 30px;
+	box-sizing: border-box;
 }
 .chosen-container-active.chosen-with-drop .chosen-single{
 	background: #f7f7f7;
@@ -1406,6 +1426,10 @@ footer hr{
 	background: none;
 	cursor: pointer;
 }
+.o-thumbs-wrap .slick-prev.slick-disabled:before,
+.o-thumbs-wrap .slick-next.slick-disabled:before{
+	color: #ccc;
+}
 .o-thumbs-wrap .slick-prev{
 	left: 0px;
 }
@@ -1904,4 +1928,27 @@ dd .sample-list-inner.multiline li{
 .a-vacancy .a-vacancy-btn{
 	width: 215px;
 	height: 45px;
+}
+
+
+.city-box{
+	width: 520px;
+}
+#city-box h2{
+	margin-bottom: 25px;
+}
+.city-box li {
+    display: inline-block; /*necessary*/
+    width: 160px;
+    margin-bottom: 5px;
+    margin-right: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.city-box li:hover{
+	text-decoration: none;
 }

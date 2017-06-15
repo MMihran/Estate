@@ -87,7 +87,7 @@
 							<input type="text" name="" placeholder="Поиск">
 						</div>
 						<div class="filter-select">
-							<select class="chosen-select" data-placeholder="Выберите город">
+							<select class="chosen-select select-more" data-placeholder="Выберите город">
 								<option></option>
 								<option>Все</option>
 								<option>Казань</option>
@@ -101,7 +101,6 @@
 								<option>Бугульма</option>
 								<option>Елабуга</option>
 								<option>Заинск</option>
-								<option>Выбрать другой...</option>
 							</select>
 							<select class="chosen-select" data-placeholder="Квартиры">
 								<option></option>
@@ -132,7 +131,7 @@
 								<option>Альметьевск</option>
 								<option>Азнакаево</option>
 								<option>Бугульма</option>
-								<option>Елабуга</option>								
+								<option>Елабуга</option>
 								<option>Выбрать другой...</option>
 							</select>
 						</div>
@@ -204,12 +203,12 @@
 							<img src="img/o1.jpg" alt="" style="display: inline-block;" href="img/o1.jpg" id="o-prime-img">
 						</div>
 						<ul class="o-thumbs-wrap">
-							<li class="active"><img src="img/o1.jpg"></li>
-							<li><img src="img/o2.jpg" alt=""></li>
-							<li><img src="img/o3.jpg" alt=""></li>
-							<li><img src="img/o4.jpg" alt=""></li>
-							<li><img src="img/o5.jpg" alt=""></li>
-							<li><img src="img/o6.jpg" alt=""></li>
+							<li class="active"><a href="img/o1.jpg"><img src="img/o1.jpg" alt=""></a></li>
+							<li><a href="img/o2.jpg"><img src="img/o2.jpg" alt=""></a></li>
+							<li><a href="img/o3.jpg"><img src="img/o3.jpg" alt=""></a></li>
+							<li><a href="img/o4.jpg"><img src="img/o4.jpg" alt=""></a></li>
+							<li><a href="img/o5.jpg"><img src="img/o5.jpg" alt=""></a></li>
+							<li><a href="img/o6.jpg"><img src="img/o6.jpg" alt=""></a></li>
 						</ul>
 						<div class="o-params-wrap">
 							<span class="o-params-head">Цены на квартиры в ЖК “Нахабино Яснео”</span>
@@ -389,6 +388,16 @@
 	    	</div>
 	    </div>
 	</div>
+	
+	<div class="b-popup" id="city-box">
+		<div class="b-popup-content">
+	    	<div class="b-popup-wrap">
+	    		<h2>Выберите другой город</h2>
+	    		<ul class="city-box"></ul>
+	    		<span class="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+	    	</div>
+	    </div>
+	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/selectize.min.js"></script>
@@ -403,16 +412,25 @@
 			arrows: true,
 			dots: false,
 			autoplay: false,
-			variableWidth: true
+			variableWidth: true,
+			infinite: false
 		});
-		$('#o-prime-img, .popup-layout').magnificPopup({
+		$('.popup-layout').magnificPopup({
 			type: 'image',
 			closeOnContentClick: true,
 			image: {
 				verticalFit: true
-			}
-			
+			}			
 		});
+		$(".o-thumbs-wrap").magnificPopup({
+			delegate: "a",
+			type: "image",
+			gallery: {
+				enabled: true,
+				tCounter: '%curr% из %total%'
+			}
+		});
+		$('.o-thumbs-wrap').off('click');
 
 	});
 </script>
