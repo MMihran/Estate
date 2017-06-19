@@ -13,29 +13,17 @@ function showMore(event){
     $('body').on('click', '.show-more-btn', function(event) {
         event.preventDefault();
         event.stopPropagation();
-        $.ajaxSetup({
-          cache:false
-        });
-        jqxhr = $.getJSON("city.json", function(data){
-        for(var i=0;i<data.length;i++){
-            cityArr[i] = "<li>" + data[i] + "</li>";
-        }
-        }).done(function() {
-            var str = [].join.call(cityArr, " ");
-            $(".city-box").html(cityArr);
-            $("#city-box").fadeIn();
-            $(".city-box li").click(function(e){  
-                if (counter && $.inArray(addCity, citySelectizeStart) == -1) {
-                    console.log("NOT FOUND " + addCity + " in " + citySelectizeStart);
-                    $select[0].selectize.removeOption(addCity);
-                    $select[0].selectize.refreshItems();
-                }
-                counter = 1;
-                addCity = $(this).text();
-                $select[0].selectize.addOption({value: addCity, text: addCity});
-                $select[0].selectize.addItem(addCity);
-                $("#city-box").fadeOut();
-            });
+        $("#city-box").fadeIn();
+        $(".city-box li").click(function(e){  
+            if (counter && $.inArray(addCity, citySelectizeStart) == -1) {
+                $select[0].selectize.removeOption(addCity);
+                $select[0].selectize.refreshItems();
+            }
+            counter = 1;
+            addCity = $(this).text();
+            $select[0].selectize.addOption({value: addCity, text: addCity});
+            $select[0].selectize.addItem(addCity);
+            $("#city-box").fadeOut();
         });
 
     });

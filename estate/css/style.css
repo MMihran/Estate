@@ -1941,7 +1941,7 @@ dd .sample-list-inner.multiline li{
     display: inline-block; /*necessary*/
     width: 160px;
     margin-bottom: 5px;
-    margin-right: 13px;
+    margin-right: 10px;
     overflow: hidden;
     white-space: nowrap;
     font-size: 14px;
